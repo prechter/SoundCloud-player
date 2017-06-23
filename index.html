@@ -20,7 +20,7 @@
     <hr>
     <section class="search">
       <form class="search-form">
-        <input id="searchfield" type="text" name="search" value="" placeholder="Artists/Tracks">
+        <input id="searchfield" type="text" name="search" value="" placeholder="Artists/Tracks" autocomplete="off">
         <button id="searchbutton" type="submit">FIND</button>
       </form>
     </section>
@@ -28,15 +28,18 @@
   <br>
   <div id="results">
     <div class="music">
-      <h3>User Results:</h3>
       <section id="userresults">  </section>
     </div>
     <div class="music">
-      <h3>Track Results:</h3>
       <section id="trackresults">  </section>
     </div>
   </div>
+  <br><br>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
   <script src="main.js"></script>
 </body>
+<footer>
+  <p id="foot"></p>
+  <!-- <img id="durham" src="durham.png"> -->
+</footer>
 </html>

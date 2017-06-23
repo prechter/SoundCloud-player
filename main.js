@@ -1,21 +1,3 @@
-/*
-  Here is a guide for the steps you could take:
-*/
-
-// 1. First select and store the elements you'll be working with
-
-
-// 2. Create your `onSubmit` event for getting the user's search term
-
-
-// 3. Create your `fetch` request that is called after a submission
-
-
-// 4. Create a way to append the fetch results to your page
-
-
-// 5. Create a way to listen for a click that will play the song in the audio play
-
 let musicPlayer = document.getElementById('musicplayer');
 // let trackSearch = document.getElementById('search-field');
 let searchButton = document.getElementById('searchbutton');
@@ -39,19 +21,20 @@ fetch(userAPI)
       }
       response.json().then(function(data) {
         console.log(data[0]);
-        document.getElementById('userresults').innerHTML = '';
+        document.getElementById('userresults').innerHTML = '<h1>USERS</h1>';
         for (var i = 0; i < data.length; i++) {
           let markup = `
                 <div class="user-wrapper">
-                  <img class="user-avatar" src="${data[i].avatar_url}">
-                  <figcaption class="username">${data[i].username}</figcaption>
+                  <img class="user-avatar" src="${data[i].avatar_url}" width=150vw height=150vw>
+                  <br><br>
+                  <a href="${data[i].permalink_url}" class="username">${data[i].username}</a>
                 </div><br>`
-        document.getElementById('userresults').innerHTML += markup;
+        document.getElementById('userresults').innerHTML +=  markup;
         }
         return;
-    })
-  }
-)
+        })
+      }
+    )
 
   let trackAPI = 'http://api.soundcloud.com/tracks/?client_id=8538a1744a7fdaa59981232897501e04&q=' + string;
 
@@ -63,17 +46,30 @@ fetch(trackAPI)
         return;
       }
       response.json().then(function(data) {
-        document.getElementById('trackresults').innerHTML = '';
+        document.getElementById('trackresults').innerHTML = '<h1>TRACKS</h1>';
         for (var i = 0; i < data.length; i++) {
           let markup = `
                 <div class="user-wrapper">
-                  <img class="user-avatar" src="${data[i].user.avatar_url}">
-                  <figcaption class="username">${data[i].username}</figcaption>
-                  <figcaption class="song-title">${data[i].title}</figcaption>
+                  <img class="user-avatar" src="${data[i].user.avatar_url}" width=150vw height=150vw>
+                  <br><br>
+                  <a href="${data[i].permalink_url}" class="username">${data[i].user.username}</a><br>
+                  <a href="${data[i].stream_url}" class="song-title">${data[i].title}</a>
                 </div><br>`
         document.getElementById('trackresults').innerHTML += markup;
         }
         return;
-    })
-  }
-)};
+        })
+      }
+    )
+};
+
+let songSelect = getElementsByClassName('user-wrapper');
+
+songSelect.addEventListener('click', playMusic);
+
+function playMusic() {
+  let stream = document.getElementsByClassName('song-title');
+  let song = stream.value;
+  let songLink = song + '?client_id=8538a1744a7fdaa59981232897501e04';
+  musicPlayer.setAttribute("src", songLink).play();
+}

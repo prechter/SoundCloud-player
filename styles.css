@@ -48,6 +48,7 @@ hr {
 .search-form {
   padding-top: 28px;
   text-align: center;
+  padding-bottom: 28px;
 }
 
 input {
@@ -94,4 +95,43 @@ button:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 20vw 0 20vw;
+  text-align: center;
+  /*background-color: #3D6E8F;*/
+}
+
+/*#userresults, #trackresults {
+  display: flex;
+  flex-flow: row wrap;
+}*/
+
+.user-avatar {
+  border-radius: 50%;
+}
+
+.username {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.song-title {
+  color: #DA5068;
+  /*text-decoration: underline;*/
+}
+
+footer {
+  text-align: center;
+  background-image: url("durham.png");
+  background-repeat:repeat;
+  background-position: top;
+  filter: invert(100%);
+  width: 100%;
+}
+
+#foot {
+  padding: 20vw;
+}
+
+#durham {
+  filter: invert(100%);
 }
