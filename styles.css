@@ -45,7 +45,7 @@ hr {
   width: 50%;
 }
 
-form {
+.search-form {
   padding-top: 28px;
   text-align: center;
 }
@@ -88,4 +88,10 @@ button:focus {
 ::placeholder {
   color: gray;
   font-weight: lighter;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20vw 0 20vw;
 }

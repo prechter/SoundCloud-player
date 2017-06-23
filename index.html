@@ -15,23 +15,26 @@
       <h1>Spotifly <img id="logo" src="headphones.png"></h1>
     </header>
     <section class="player">
-      <audio class="music-player" controls="controls" src=""></audio>
+      <audio id="musicplayer" controls="controls" src=""></audio>
     </section>
     <hr>
     <section class="search">
-      <form class="search-form" onsubmit="userSearch()">
-        <input id="search-field" type="text" name="search" placeholder="Artists/Tracks">
-        <button id="search-button" onclick="">FIND</button>
+      <form class="search-form">
+        <input id="searchfield" type="text" name="search" value="" placeholder="Artists/Tracks">
+        <button id="searchbutton" type="submit">FIND</button>
       </form>
     </section>
   </div>
   <br>
-  <div>
-    <h3>Search Results:</h3>
-    <section class="results">
-
-      
-    </section>
+  <div id="results">
+    <div class="music">
+      <h3>User Results:</h3>
+      <section id="userresults">  </section>
+    </div>
+    <div class="music">
+      <h3>Track Results:</h3>
+      <section id="trackresults">  </section>
+    </div>
   </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
   <script src="main.js"></script>
