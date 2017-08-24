@@ -1,17 +1,16 @@
 body {
-  background-color: black;
+  background-color: #1A1A1A;
   font-family: 'Didact Gothic', sans-serif;
   color: white;
+  background-image: url("images/pexels-photo-92083.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container{
-
-}
 
 header {
-  background-image: url("sylvan_esso.jpg");
-  background-position: 0% 28%;
-  background-size: cover;
   text-align: center;
   color: white;
   margin-top: 0;
@@ -32,18 +31,8 @@ header {
   text-align: center;
 }
 
-audio {
-  width: 100%;
-  padding-bottom: 28px;
-}
 
-hr {
-  /*color: white;
-  background-color: white;*/
-  border: 0;
-  height: 2.5px;
-  width: 50%;
-}
+
 
 .search-form {
   padding-top: 28px;
@@ -57,9 +46,9 @@ input {
   border: none;
   border-bottom: solid;
   border-color: white;
-  background-color: black;
+  /*background-color: #1A1A1A;*/
   font-size: 3vw;
-  color: #DA5068;
+  color: #FF6763;
 }
 
 input:focus {
@@ -82,7 +71,7 @@ button {
 
 button:focus {
   outline: none;
-  background-color: #DA5068;
+  background-color: #FF6763;
   color: white;
 }
 
@@ -95,7 +84,7 @@ button:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 20vw 0 20vw;
-  text-align: center;
+  text-align: left;
   /*background-color: #3D6E8F;*/
 }
 
@@ -103,6 +92,12 @@ button:focus {
   display: flex;
   flex-flow: row wrap;
 }*/
+
+.song-wrapper {
+  width: 55vw;
+  display: flex;
+  flex-direction: row;
+}
 
 .user-avatar {
   border-radius: 50%;
@@ -115,23 +110,26 @@ button:focus {
 }
 
 .song-title {
-  color: #DA5068;
+  color: #FF6763;
   /*text-decoration: underline;*/
 }
 
+
 footer {
-  text-align: center;
-  background-image: url("durham.png");
-  background-repeat:repeat;
-  background-position: top;
-  filter: invert(100%);
   width: 100%;
+  /*position: fixed;*/
+  bottom: 80px;
+  font-family: 'Didact Gothic', sans-serif;
 }
 
-#foot {
-  padding: 20vw;
+#footer-wrapper {
+  text-align: center;
+  transition: height 1s, opacity .2s;
+  font-size: 14px;
+  opacity: 1;
 }
 
-#durham {
-  filter: invert(100%);
+a {
+  color: white;
+  text-decoration: none;
 }
