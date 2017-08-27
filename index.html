@@ -6,62 +6,48 @@
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <script src="https://use.fontawesome.com/1227573c86.js"></script>
-  <title>SoundCloud Music Search</title>
+  <title>What's your jam?</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+        type="image/png"
+        href="images/headphones.png">
 </head>
 
 <body>
-
-
-
+  <div class="corner-ribbon">
+    <a href="https://developers.soundcloud.com/docs/api/guide"><i class="fa fa-soundcloud" aria-hidden="true"></i><span> SoundCloud</span></a>
+  </div>
 
   <div class="container">
     <header>
-      <h1>Spotifly <img id="logo" src="images/headphones.png"></h1>
+      <h1>What's your jam?</h1>
     </header>
     <br>
+    <p id="now-playing"></p>
     <section class="search">
       <form class="search-form" method="get" onsubmit="searchTracks(); return false;">
-        <input id="search-field" type="text" name="search" placeholder="Search by artist or song" autocomplete="off">
-        <button id="search-button" type="submit" value="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        <input id="search-field" type="text" name="search" placeholder="Search" autocomplete="off">
+        <button type="submit" value="submit">
+          >
+        </button>
       </form>
     </section>
   </div>
 
-  <div class="player-search">
-    <section class="player">
-      <audio id="music-player" controls="controls" src=""></audio>
-      <p id="now-playing"></p>
-    </section>
+  <div class="player">
+    <audio id="music-player" controls="controls" src=""></audio>
   </div>
 
   <br>
 
-  <div id="results">
-    <div class="music">
-      <section id="track-results">  </section>
-    </div>
-  </div>
-
-
-  <!-- <section class="results">
-    <div id="track-results"></div>
-  </section> -->
-
-
-  <br><br>
+  <div id="results"></div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
   <script src="main.js"></script>
 </body>
-
-<footer>
-  <div id="footer-wrapper">
-    <a href="https://developers.soundcloud.com/docs/api/guide"><i class="fa fa-soundcloud" aria-hidden="true"></i><span> powered by SoundCloud</span></a>
-  </div>
-</footer>
 
 </html>

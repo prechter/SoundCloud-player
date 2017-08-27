@@ -1,6 +1,8 @@
+/*General styling*/
+
 body {
   background-color: #1A1A1A;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Pontano Sans', sans-serif;
   color: white;
   background-image: url("images/pexels-photo-92083.jpeg");
   background-attachment: fixed;
@@ -9,46 +11,43 @@ body {
   background-size: cover;
 }
 
-
 header {
   text-align: center;
   color: white;
   margin-top: 0;
   font-size: 4vw;
-  padding: 30px;
-  /*border-style: solid;
-  border-width: 5px;
-  border-color: white;*/
+  font-family: 'Permanent Marker', cursive;
 }
 
-#logo{
-  height: 5vw;
-  color: white;
-  filter: invert(100%);
+h1 {
+  margin-bottom: 0;
 }
 
-.player {
+p {
   text-align: center;
+  font-size: 2vw;
+  color: #FF7400;
+  font-family: 'Permanent Marker', cursive;
 }
 
 
-
+/*Search bar*/
 
 .search-form {
-  padding-top: 28px;
   text-align: center;
   padding-bottom: 28px;
 }
 
 input {
   width: 50%;
-  height: 3vw;
-  border: none;
-  border-bottom: solid;
+  height: 5vw;
   border-color: white;
-  /*background-color: #1A1A1A;*/
-  font-size: 3vw;
-  color: #FF6763;
+  font-size: 5vw;
+  background-color: transparent;
+  text-align: left;
+  border: 0;
+  border-bottom: solid 3px;
+  font-family: 'Pontano Sans', sans-serif;
 }
 
 input:focus {
@@ -56,14 +55,11 @@ input:focus {
 }
 
 button {
-  background-color: white;
+  background-color: transparent;
   border: none;
-  color: black;
-  /*padding: 15px 32px;*/
-  text-align: center;
+  color: white;
   text-decoration: none;
-  display: inline-block;
-  font-size: 3vw;
+  font-size: 5vw;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 2px;
@@ -71,65 +67,98 @@ button {
 
 button:focus {
   outline: none;
-  background-color: #FF6763;
-  color: white;
+  color: #FF7400;
 }
 
 ::placeholder {
   color: gray;
   font-weight: lighter;
+  opacity: 0.3;
 }
+
+
+
+/*Music player*/
+.player {
+  text-align: center;
+  position: fixed;
+  bottom: -5px;
+}
+
+#music-player {
+  width: 100vw;
+}
+
+
+
+/*Results layout*/
 
 #results {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 20vw 0 20vw;
-  text-align: left;
-  /*background-color: #3D6E8F;*/
+  margin: 0 22vw 5vw 22vw;
 }
 
-/*#userresults, #trackresults {
-  display: flex;
-  flex-flow: row wrap;
-}*/
-
 .song-wrapper {
-  width: 55vw;
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
+  margin-bottom: 25px;
+}
+
+
+.text-wrapper {
+  margin-left: 1.5vw;
 }
 
 .user-avatar {
-  border-radius: 50%;
+  border-radius: 2%;
+  align-items: center;
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
 }
 
 .username {
   color: white;
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: 600;
+  font-size: 14pt;
 }
 
 .song-title {
-  color: #FF6763;
-  /*text-decoration: underline;*/
+  color: white;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 12pt;
+}
+
+hr {
+  color: white;
 }
 
 
-footer {
-  width: 100%;
-  /*position: fixed;*/
-  bottom: 80px;
-  font-family: 'Didact Gothic', sans-serif;
-}
 
-#footer-wrapper {
-  text-align: center;
-  transition: height 1s, opacity .2s;
+/*SoundCloud ribbon*/
+
+.corner-ribbon {
   font-size: 14px;
-  opacity: 1;
+  font-family: 'Pontano Sans', sans-serif;
+  width: 200px;
+  background: #FF7400;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
 }
 
 a {
   color: white;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: navy;
 }
