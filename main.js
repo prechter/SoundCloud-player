@@ -34,8 +34,7 @@ function searchTracks() {
                   <br>
                   <div class="likes">${track.likes_count} <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></div>
                 </div>
-              </div>
-              <hr>`
+              </div>`
             ).join('')}`
           }
           let markup = `${showResults()}`;
