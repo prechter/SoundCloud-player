@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 const musicPlayer = document.querySelector('#music-player');
 const nowPlaying = document.querySelector('#now-playing')
 const results = document.querySelector('#results');
@@ -7,7 +8,9 @@ let string = ''
 function searchTracks() {
   event.preventDefault();
   // preventDefault stops the page from reloading which was causing a break somewhere in the function(note: this can also be fixed by changing the "form" to a "div")
-  string = document.querySelector('#search-field').value;
+  header.classList.add('fadeout');
+  results.classList.add('displayed');
+  let string = document.querySelector('#search-field').value;
   let trackAPI = 'http://api.soundcloud.com/tracks/?client_id=8538a1744a7fdaa59981232897501e04&q=' + string + '&limit=20';
 
   fetch(trackAPI)
@@ -31,8 +34,8 @@ function searchTracks() {
                   <span class="username" data-src="${track.stream_url}" data-title="${track.title}">${track.user.username}</span>
                   <br>
                   <span class="song-title" data-src="${track.stream_url}" data-title="${track.title}">${track.title}</span>
-                  <br>
-                  <div class="likes">${track.likes_count} <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></div>
+                  <br><br>
+                  <div class="likes">${track.likes_count} Likes</div>
                 </div>
               </div>`
             ).join('')}`
@@ -52,6 +55,7 @@ function playTrack(track) {
   console.log(trackSource);
   var trackPlaying = track.target.getAttribute("data-title");
   console.log(trackPlaying);
-  nowPlaying.innerHTML = "Now playing: " + trackPlaying;
+  nowPlaying.innerHTML = trackPlaying;
   musicPlayer.setAttribute("src", trackSource + "?client_id=8538a1744a7fdaa59981232897501e04");
+  musicPlayer.play();
 }

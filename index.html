@@ -28,17 +28,16 @@
       <h1>What's your jam?</h1>
     </header>
     <br>
-    <p id="now-playing"></p>
     <section class="search">
       <form class="search-form" method="get" onsubmit="searchTracks(); return false;">
         <input id="search-field" type="text" name="search" placeholder="Search" autocomplete="off">
         <button type="submit" value="submit">
-          >
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
         </button>
       </form>
     </section>
   </div>
-
+  <p id="now-playing"></p>
   <div class="player">
     <audio id="music-player" controls="controls" src=""></audio>
   </div>
