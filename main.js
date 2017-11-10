@@ -11,7 +11,7 @@ function searchTracks() {
   header.classList.add('fadeout');
   results.classList.add('displayed');
   let string = document.querySelector('#search-field').value;
-  let trackAPI = 'http://api.soundcloud.com/tracks/?client_id=8538a1744a7fdaa59981232897501e04&q=' + string + '&limit=20';
+  let trackAPI = 'https://api.soundcloud.com/tracks/?client_id=8538a1744a7fdaa59981232897501e04&q=' + string + '&limit=20';
 
   fetch(trackAPI)
     .then(
