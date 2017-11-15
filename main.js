@@ -5,6 +5,18 @@ const results = document.querySelector('#results');
 let dataFetch = {};
 let string = ''
 
+function backgroundChange(interval, frames) {
+    let int = 1;
+    function next() {
+      document.body.id = "b" + int;
+      int++;
+      if(int === frames) { int = 1; }
+    }
+    let swap = window.setInterval(next, interval);
+}
+
+backgroundChange(20000, 6);
+
 function searchTracks() {
   event.preventDefault();
   // preventDefault stops the page from reloading which was causing a break somewhere in the function(note: this can also be fixed by changing the "form" to a "div")

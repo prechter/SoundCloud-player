@@ -2,21 +2,25 @@
 body {
   background-color: rgb(250,250,250);
   font-family: 'Roboto Condensed', sans-serif;
-  color: rgb(250,250,250);
-  background-image: url("images/background.jpg");
+  background-image: url("images/background1.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+#b2 { background-image: url("images/background2.jpeg"); }
+#b3 { background-image: url("images/background3.jpeg"); }
+#b4 { background-image: url("images/background4.jpeg"); }
+#b5 { background-image: url("images/background5.jpeg"); }
+
 header {
   text-align: center;
-  color: #5A5A5A;
+  color: rgb(250,250,250);
   margin-top: 0;
   font-size: 4vw;
   font-family: 'Pacifico', cursive;
-  text-shadow: .2vw .2vw rgb(250,250,250);
+  text-shadow: .2vw .2vw #5A5A5A;
 }
 
 header.fadeout {
