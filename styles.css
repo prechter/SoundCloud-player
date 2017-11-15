@@ -1,8 +1,8 @@
 /*General styling*/
 body {
-  background-color: #1A1A1A;
+  background-color: rgb(250,250,250);
   font-family: 'Roboto Condensed', sans-serif;
-  color: white;
+  color: rgb(250,250,250);
   background-image: url("images/background.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -12,11 +12,11 @@ body {
 
 header {
   text-align: center;
-  color: white;
+  color: #5A5A5A;
   margin-top: 0;
   font-size: 4vw;
-  font-family: 'Permanent Marker', cursive;
-  text-shadow: 0 0 3px rgba(0,0,0,.3);
+  font-family: 'Pacifico', cursive;
+  text-shadow: .2vw .2vw rgb(250,250,250);
 }
 
 header.fadeout {
@@ -36,7 +36,7 @@ header.fadeout {
 input {
   width: 50%;
   height: 4vw;
-  border-color: white;
+  color: rgb(250,250,250);
   font-size: 4vw;
   background-color: transparent;
   text-align: left;
@@ -53,7 +53,7 @@ input:focus {
 button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(250,250,250);
   text-decoration: none;
   font-size: 5vw;
   margin: 4px 2px;
@@ -67,7 +67,7 @@ button:focus {
 }
 
 ::placeholder {
-  color: #FFFFFF;
+  color: rgba(250,250,250,0.5);
   font-weight: lighter;
   opacity: 0.8;
 }
@@ -95,7 +95,7 @@ button:focus {
   color: rgb(90,90,90);
   background-color: rgb(250,250,250);
   width: 100vw;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto Condensed', sans-serif;
   border-top-style: solid;
   border-width: 1px;
   border-color: rgba(0,0,0,.1);
@@ -149,7 +149,7 @@ button:focus {
 }
 
 hr {
-  color: white;
+  color: rgb(250,250,250);
 }
 
 
@@ -173,7 +173,7 @@ hr {
 }
 
 a {
-  color: white;
+  color: rgb(250,250,250);
   text-decoration: none;
 }
 
